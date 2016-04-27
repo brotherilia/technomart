@@ -1,0 +1,97 @@
+.search {
+  position: relative;
+
+  float: left;
+}
+
+.search__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 270px;
+  height: 43px;
+}
+
+.search__label::before {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  content: "";
+
+  opacity: 0.3;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+  background-position: -5px -485px;
+}
+
+.search__label:hover::before {
+  opacity: 1;
+}
+
+.search__input {
+  font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 17px;
+
+  position: relative;
+  z-index: 5;
+
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 47px;
+
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background-color: #293449;
+}
+
+.search__input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.search__input:focus + .search__label::before {
+  opacity: 1;
+  background-position: -5px -512px;
+}
+
+.search__input:focus + .search__label {
+  background: #ffffff;
+}
+
+.search__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.search__input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+}
+.search__input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+}
+.search__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.search__input:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+.search__input:focus:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000000;
+}
+.search__input:focus::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000000;
+}
+.search__input:focus:-ms-input-placeholder {
+  color: #000000;
+}

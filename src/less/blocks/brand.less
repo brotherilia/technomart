@@ -1,0 +1,46 @@
+.brand {
+  display: inline-block;
+
+  width: 218px;
+  height: 143px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  vertical-align: top;
+
+  border: 1px solid #e5e5e5;
+}
+
+.brand__link {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.brand__link img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.brand:hover {
+  border: 1px solid #ffffff;
+  box-shadow: 0 10px 25px 0 rgba(85, 97, 119, 0.5);
+}
+
+.brand:active {
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+  box-shadow: 0 4px 10px 0 #556177;
+}
+
+.brand:nth-child(4n) {
+  margin-right: 0;
+}

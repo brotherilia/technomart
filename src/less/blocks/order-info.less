@@ -1,0 +1,92 @@
+.order-info {
+  float: right;
+}
+
+.order-info__list,
+.order-info__item {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.order-info,
+.order-info__list {
+  font-size: 0;
+}
+
+.order-info__item {
+  font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 17px;
+  line-height: 43px;
+
+  position: relative;
+
+  display: inline-block;
+
+  width: 106px;
+  padding-left: 44px;
+
+  vertical-align: middle;
+}
+
+.order-info__item--not-empty {
+  background-color: #ee3643;
+}
+
+.order-info__item:hover {
+  background-color: #212a3a;
+}
+
+.order-info__item:active {
+  opacity: 0.5;
+  background-color: #161d29;
+}
+
+.order-info__link {
+  display: block;
+
+  text-decoration: none;
+
+  color: #ffffff;
+}
+
+.order-info__link::before {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  display: block;
+
+  content: "";
+
+  opacity: 0.3;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}
+
+.order-info__link:hover::before,
+.order-info__link:active::before {
+  opacity: 1;
+}
+
+.order-info__link--bookmarks::before {
+  width: 14px;
+  height: 16px;
+
+  background-position: -5px -5px;
+}
+
+.order-info__link--cart::before {
+  width: 17px;
+  height: 16px;
+
+  background-position: -5px -31px;
+}
+
+.order-info__list,
+.order-btn {
+  display: inline-block;
+
+  vertical-align: middle;
+}

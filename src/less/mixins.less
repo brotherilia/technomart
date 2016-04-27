@@ -1,0 +1,36 @@
+.clearfix() {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+.dots() {
+  overflow: hidden;
+
+  box-sizing: border-box;
+  padding-right: 10px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.column-header() {
+  .clearfix();
+  font-family: "PT Sans", "Arial Narrow", sans-serif;
+  font-size: 13px;
+
+  min-height: 33px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 18px;
+
+  text-transform: uppercase;
+  text-transform: uppercase;
+
+  border-radius: 3px;
+  background-color: #f7f3ec;
+}
+

@@ -1,0 +1,115 @@
+.fieldset,
+.fieldset__list,
+.fieldset__item {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.fieldset {
+  border: none;
+}
+
+.fieldset--range,
+.fieldset--check {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+.fieldset--check,
+.fieldset--radio {
+  margin-top: 21px;
+}
+
+.fieldset__title {
+  font-family: "PT Sans", "Arial Narrow", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+
+  margin-left: -3px;
+
+  text-transform: uppercase;
+}
+
+.fieldset__list {
+  margin-top: 16px;
+}
+
+.fieldset__item {
+  font-family: "PT Sans", "Arial Narrow", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+}
+
+.fieldset__input {
+  display: none;
+}
+
+.fieldset__label {
+  position: relative;
+
+  display: block;
+
+  padding-left: 35px;
+}
+
+.fieldset__label::before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  display: block;
+
+  content: "";
+
+  opacity: 0.7;
+  background: url("../img/sprite-icons.png") no-repeat;
+}
+
+.fieldset__label:hover::before {
+  opacity: 1;
+}
+
+.fieldset__label--check::before {
+  width: 23px;
+  height: 23px;
+
+  background-position: -5px -57px;
+}
+
+.fieldset__label--radio::before {
+  width: 25px;
+  height: 25px;
+
+  background-position: -5px -365px;
+}
+
+.fieldset__input--check:checked + .fieldset__label--check::before {
+  width: 27px;
+  height: 23px;
+
+  background-position: -5px -90px;
+}
+
+.fieldset__input--radio:checked + .fieldset__label--radio::before {
+  background-position: -5px -400px;
+}
+
+.fieldset__input:disabled + .fieldset__label,
+.fieldset__input:disabled + .fieldset__label:hover,
+.fieldset__input:disabled + .fieldset__label::before,
+.fieldset__input:disabled + .fieldset__label:hover::before {
+  opacity: 1;
+  opacity: 0.4;
+}
+
+.fieldset--range {
+  width: 220px;
+  margin-top: -5px;
+  padding-bottom: 27px;
+}
