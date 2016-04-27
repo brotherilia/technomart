@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Компания "Техномарт"</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <!--++++++++++++++++ BACKGROUND FOR MODAL OBJECTS ++++++++++++++++-->
+    <div class="modal-object-bg js-modalObjectBg">
+    </div>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                                                              -->
+    <!--                        PAGE HEADER                           -->
+    <!--                                                              -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <header class="page-header">
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                           NAVBAR                             -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <nav class="navbar">
+        <div class="container">
+          <!--+++++++++++++++++++++++++++ LOGO +++++++++++++++++++++++++++++-->
+          <h1 class="logo logo--header">
+            <a class="logo__link" href="index.html">
+              Техномарт
+            </a>
+          </h1>
+          <!--+++++++++++++++++++++++++++ SEARCH +++++++++++++++++++++++++++-->
+          <div class="search">
+            <form action="/echo" method="post">
+              <input id="search" class="search__input" type="text" name="search" placeholder="Поиск:">
+              <label for="search" class="search__label">
+              </label>
+            </form>
+          </div>
+          <!--+++++++++++++++++++++++++++ ORDER ++++++++++++++++++++++++++++-->
+          <div class="order-info">
+            <ul class="order-info__list">
+              <li class="order-info__item js-bookmarksOrderInfoItem">
+                <a class="order-info__link order-info__link--bookmarks" href="#">
+                  Закладки:
+                  <span class="order-info__count order-info__count--bookmarks">
+                    0
+                  </span>
+                </a>
+              </li>
+              <li class="order-info__item js-cartOrderInfoItem">
+                <a class="order-info__link order-info__link--cart" href="#">
+                  Корзина:
+                  <span class="order-info__count order-info__count--cart">
+                    0
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <a class="order-btn" href="#">Оформить заказ</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                          HEADER INFO                         -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="header-info">
+          <!--++++++++++++++++++++++ DESCRIPTION +++++++++++++++++++++++++++-->
+          <p class="header-info__description">
+            Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта
+          </p>
+          <!--++++++++++++++++++++++++ CONTACTS ++++++++++++++++++++++++++++-->
+          <div class="contacts">
+            <div class="contacts__phone">
+              <a class="contacts__phone-number" href="tel:+78125550555">
+                +7 (812) 555-05-55
+              </a>
+            </div>
+            <span class="contacts__address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </span>
+          </div>
+          <!--++++++++++++++++++++++++++ AUTH ++++++++++++++++++++++++++++++-->
+          <div class="auth">
+            <a class="auth-btn auth-btn--user" href="#">
+              Равшан Джамшутович
+            </a>
+            <a class="auth-btn auth-btn--logout" href="#"></a>
+            <ul class="personal">
+              <li class="personal__item">
+                <a class="personal__link" href="#">
+                  Мои заказы
+                </a>
+              </li>
+              <li class="personal__item">
+                <a class="personal__link" href="#">
+                  Личный кабинет
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                        HEADER MENU                           -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="main-menu">
+          <ul class="main-menu__items">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">
+                Компания
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="catalog.html">
+                Каталог
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">
+                Новости
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">
+                Спецпредложения
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">
+                Доставка
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                                                              -->
+      <!--                         BREADCRUMBS                          -->
+      <!--                                                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <nav class="breadcrumbs">
+        <ul class="breadcrumbs__items">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link breadcrumbs__link--home icon-home" href="index.html">
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="catalog.html">
+              Каталог
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="catalog.html">
+              Инструмент
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            Перфораторы
+          </li>
+        </ul>
+      </nav>
+      <section class="section">
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                     MAIN SECTION TITLE                       -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <h2 class="section__title section__title--cyan-bg">
+          Перфораторы
+        </h2>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                        FILTER BLOCK                          -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="column column--1">
+          <form action="/echo" method="get">
+            <div class="column__header">Фильтр:</div>
+            <fieldset class="fieldset fieldset--range">
+              <legend class="fieldset__title">
+                Цена:
+              </legend>
+              <div class="range">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min"></div>
+                <div class="range__toggle range__toggle--max"></div>
+              </div>
+              <div class="range__fields">
+                <input class="range__input range__input--min" name="min-price" type="text" value="0">
+                <div class="range__dash">
+                  &ndash;
+                </div>
+                <input class="range__input range__input--max" name="max-price" type="text" value="30000">
+              </div>
+            </fieldset>
+            <fieldset class="fieldset fieldset--check">
+              <legend class="fieldset__title">Производители:</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <input id="bosch" class="fieldset__input fieldset__input--check" type="checkbox" name="vendor" checked>
+                  <label for="bosch" class="fieldset__label fieldset__label--check">
+                    Bosch
+                  </label>
+                </li>
+                <li class="fieldset__item">
+                  <input id="interskol" class="fieldset__input fieldset__input--check" type="checkbox" name="vendor">
+                  <label for="interskol" class="fieldset__label fieldset__label--check">
+                    Интерскол
+                  </label>
+                </li>
+                <li class="fieldset__item">
+                  <input id="makita" class="fieldset__input fieldset__input--check" type="checkbox" name="vendor" checked>
+                  <label for="makita" class="fieldset__label fieldset__label--check">
+                    Makita
+                  </label>
+                </li>
+                <li class="fieldset__item">
+                  <input id="dewalt" class="fieldset__input fieldset__input--check" type="checkbox" name="vendor">
+                  <label for="dewalt" class="fieldset__label fieldset__label--check">
+                    Dewalt
+                  </label>
+                </li>
+                <li class="fieldset__item">
+                  <input id="hitachi" class="fieldset__input fieldset__input--check" type="checkbox" name="vendor">
+                  <label for="hitachi" class="fieldset__label fieldset__label--check">
+                    Hitachi
+                  </label>
+                </li>
+                  <!--
+                  <li class="fieldset__item">
+                    <input id="test" class="fieldset__input fieldset__input-/-check" type="checkbox" name="vendor" disabled>
+                    <label for="test" class="fieldset__label fieldset__label-/-check">
+                      Заблокированный
+                    </label>
+                  </li>
+                -->
+              </ul>
+            </fieldset>
+            <fieldset class="fieldset fieldset--radio">
+              <legend class="fieldset__title">Питание:</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__item">
+                  <input id="battery" class="fieldset__input fieldset__input--radio" type="radio" name="supplytype" value="battery" checked>
+                  <label for="battery" class="fieldset__label fieldset__label--radio">
+                    Аккумуляторные
+                  </label>
+                </li>
+                <li class="fieldset__item">
+                  <input id="external" class="fieldset__input fieldset__input--radio" type="radio" name="supplytype" value="external">
+                  <label for="external" class="fieldset__label fieldset__label--radio">
+                    Сетевые
+                  </label>
+                </li>
+                  <!--
+                  <li class="fieldset__item">
+                    <input id="radio3" class="fieldset__input fieldset__input-/-radio" type="radio" name="supplytype" value="external" disabled>
+                    <label for="radio3" class="fieldset__label fieldset__label-/-radio">
+                      Заблокированный
+                    </label>
+                  </li>
+                -->
+              </ul>
+            </fieldset>
+            <input class="btn btn--filter" type="submit" value="Показать">
+          </form>
+        </div>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                        CONTENT BLOCK                         -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="column column--3">
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                          SORT PANEL                          -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <div class="sort">
+            <span class="sort__title">
+              Сортировка:
+            </span>
+            <div class="sort__flag-block">
+              <span class="sort__flag-link sort__flag-link--active">
+                <i class="icon-up-dir"></i>
+              </span>
+              <a class="sort__flag-link" href="#">
+                <i class="icon-down-dir"></i>
+              </a>
+            </div>
+            <ul class="sort__list">
+              <li class="sort__item sort__item--active">
+                По цене
+              </li>
+              <li class="sort__item">
+                <a class="sort__link" href="#">
+                  По типу
+                </a>
+              </li>
+              <li class="sort__item">
+                <a class="sort__link" href="#">
+                  По функционалу
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                            CATALOG                           -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <div class="catalog catalog--3">
+            <div class="catalog-item">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg3000.jpg" width="218" height="182" alt="BFG 3000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 3000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+                22500 Р.
+              </div>
+              <div class="catalog-item__price-current">
+                15500 Р.
+              </div>
+            </div>
+            <div class="catalog-item">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg6000.jpg" width="218" height="182" alt="BFG 6000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 6000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+                30500 Р.
+              </div>
+              <div class="catalog-item__price-current">
+                25500 Р.
+              </div>
+            </div>
+            <div class="catalog-item label-new label-new--catalog">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg2000.jpg" width="218" height="182" alt="BFG 2000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 2000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+
+              </div>
+              <div class="catalog-item__price-current">
+                12500 Р.
+              </div>
+            </div>
+            <div class="catalog-item">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg3000.jpg" width="218" height="182" alt="BFG 3000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 3000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+                22500 Р.
+              </div>
+              <div class="catalog-item__price-current">
+                15500 Р.
+              </div>
+            </div>
+            <div class="catalog-item label-new label-new--catalog">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg6000.jpg" width="218" height="182" alt="BFG 6000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 6000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+                30500 Р.
+              </div>
+              <div class="catalog-item__price-current">
+                25500 Р.
+              </div>
+            </div>
+            <div class="catalog-item">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg2000.jpg" width="218" height="182" alt="BFG 2000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 2000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+
+              </div>
+              <div class="catalog-item__price-current">
+                12500 Р.
+              </div>
+            </div>
+            <div class="catalog-item label-new label-new--catalog">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg3000.jpg" width="218" height="182" alt="BFG 3000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 3000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+                22500 Р.
+              </div>
+              <div class="catalog-item__price-current">
+                15500 Р.
+              </div>
+            </div>
+            <div class="catalog-item">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg6000.jpg" width="218" height="182" alt="BFG 6000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 6000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+                30500 Р.
+              </div>
+              <div class="catalog-item__price-current">
+                25500 Р.
+              </div>
+            </div>
+            <div class="catalog-item label-new label-new--catalog">
+              <div class="catalog-item__actions">
+                <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
+                <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              </div>
+              <div class="catalog-item__image">
+                <img src="img/item-bfg2000.jpg" width="218" height="182" alt="BFG 2000">
+              </div>
+              <h3 class="catalog-item__title">
+                Перфоратор BOSCH<br>
+                BFG 2000
+              </h3>
+              <div class="catalog-item__price-cancelled">
+
+              </div>
+              <div class="catalog-item__price-current">
+                12500 Р.
+              </div>
+            </div>
+          </div>
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                          PAGINATION                          -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <ul class="pagination">
+            <li class="pagination__item">
+              <span class="btn btn--page">
+                1
+              </span>
+            </li>
+            <li class="pagination__item">
+              <a class="btn btn--page btn--page-link" href="#">
+                2
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="btn btn--page btn--page-link" href="#">
+                3
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="btn btn--page btn--page-link btn--next-page" href="#">
+                Следующая
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                                                              -->
+    <!--                       ARTICLE BLOCK                          -->
+    <!--                                                              -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <article class="article article--cyan-bg article--bottom-46">
+      <div class="container">
+        <h2 class="article__title">
+          Пара слов о перфораторах
+        </h2>
+        <p>
+          Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
+          В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </div>
+    </article>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                                                              -->
+    <!--                        PAGE FOOTER                           -->
+    <!--                                                              -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <footer class="page-footer">
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                           ROW 1                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="page-footer-row page-footer-row--1">
+        <div class="container">
+          <!--++++++++++++++++++ FOOTER COMPANY INFO +++++++++++++++++++++++-->
+          <div class="footer-company-info">
+            <div class="logo logo--footer">
+              <span class="logo__text">Техномарт</span>
+            </div>
+            <p class="address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+              +7 (812) 555-05-55
+            </p>
+          </div>
+          <!--+++++++++++++++++++++++ FOOTER MENU ++++++++++++++++++++++++++-->
+          <nav class="footer-menu footer-menu--right">
+            <ul class="footer-menu-list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Компания
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Новости
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="catalog.html">
+                  Каталог
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Доставка
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <ul class="footer-menu-list footer-menu-list--gold">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Материалы
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Техника
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Инструмент
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Спецпредложения
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <!--                           ROW 2                              -->
+      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div class="page-footer-row page-footer-row--2">
+        <div class="container">
+          <!--+++++++++++++++++++++++ COPYRIGHT ++++++++++++++++++++++++++++-->
+          <p class="copyright">
+            &copy; 2010&ndash;2015 Компания &laquo;Техномарт&raquo;<br>
+            Все права защищены
+          </p>
+          <!--+++++++++++++++++++++++++ SOCIAL +++++++++++++++++++++++++++++-->
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--vk">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--fb">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--inst">
+              </a>
+            </li>
+          </ul>
+          <!--+++++++++++++++++++++++++ VENDOR ++++++++++++++++++++++++++++-->
+          <ul class="vendor-info">
+            <li class="vendor-info__item">
+              <span class="vendor-info__text">
+                Обратная связь:
+              </span>
+              <a class="vendor-info__link" href="mailto:mail@htmlacademy.ru">
+                mail&#64;htmlacademy.ru
+              </a>
+            </li>
+            <li class="vendor-info__item">
+              <span class="vendor-info__text">
+                Разработано &mdash;
+              </span>
+              <a class="vendor-info__link" href="http://htmlacademy.ru">
+                htmlacademy.ru
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                                                              -->
+    <!--                       MODAL OBJECTS                          -->
+    <!--                                                              -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                         CART FORM                            -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="modal-object modal-form modal-form--cart js-cartModalForm">
+      <button class="modal-object__close js-ModalObjectClose">
+      </button>
+      <div class="modal-form__content modal-form__content--cart">
+        <div class="modal-form__message">
+          Товар добавлен в корзину!
+        </div>
+      </div>
+      <div class="modal-form__buttons">
+        <a class="btn btn--modal-form btn--modal-form-ok" href="#">
+          Оформить заказ
+        </a>
+        <button class="btn btn--modal-form btn--modal-form-cancel js-modalFormCancelBtn">
+          Продолжить покупки
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="js/catalog.min.js"></script>
+  </body>
+</html>

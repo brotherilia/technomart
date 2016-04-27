@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Компания "Техномарт"</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--                         MAIL FORM                            -->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="modal-object modal-form modal-form--mail nojs-modalObject">
+      <form class="mail-form" action="/echo" method="post">
+        <div class="modal-form__content modal-form__content--mail">
+          <div class="modal-form__fieldset">
+            <label class="modal-form__field-title" for="name">
+              Ваше имя:
+            </label>
+            <input class="modal-form__input modal-form__text" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="modal-form__fieldset">
+            <label class="modal-form__field-title" for="email">
+              Ваш e-mail:
+            </label>
+            <input class="modal-form__input modal-form__text" id="email" type="email" name="email" placeholder="Для отправки ответа">
+          </div>
+          <label class="modal-form__field-title" for="message">
+            Текст письма:
+          </label>
+          <textarea class="modal-form__input modal-form__textarea" id="message" name="message" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="modal-form__buttons">
+          <input type="submit" class="btn btn--modal-form btn--modal-form-ok" value="Отправить">
+          <a class="btn btn--modal-form btn--modal-form-cancel nojs-modalFormCancelBtn" href="index.html">
+            Вернуться на сайт
+          </a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
