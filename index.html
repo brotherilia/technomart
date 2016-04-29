@@ -29,8 +29,8 @@
           <!--+++++++++++++++++++++++++++ SEARCH +++++++++++++++++++++++++++-->
           <div class="search">
             <form action="/echo" method="post">
-              <input id="search" class="search__input" type="text" name="search" placeholder="Поиск:">
-              <label for="search" class="search__label">
+              <input class="search__input" id="search" type="text" name="search" placeholder="Поиск:">
+              <label class="search__label" for="search">
               </label>
             </form>
           </div>
@@ -190,9 +190,9 @@
               <input class="slider__input slider__input--1" id="slide1" name="slides" type="radio" checked>
               <input class="slider__input slider__input--2" id="slide2" name="slides" type="radio">
               <div class="slider__control-block">
-                <label for="slide1" class="slider__button slider__button--1">
+                <label class="slider__button slider__button--1" for="slide1">
                 </label>
-                <label for="slide2" class="slider__button slider__button--2">
+                <label class="slider__button slider__button--2" for="slide2">
                 </label>
               </div>
               <div class="slide slide--1">
@@ -211,9 +211,9 @@
                   Соседям на радость!
                 </p>
               </div>
-              <label for="slide1" class="slider__link-prev">
+              <label class="slider__link-prev" for="slide1">
               </label>
-              <label for="slide2" class="slider__link-next">
+              <label class="slider__link-next" for="slide2">
               </label>
               <a class="btn btn--slider" href="catalog.html">
                 Открыть каталог
@@ -264,8 +264,8 @@
         <div class="catalog catalog--4">
           <div class="catalog-item">
             <div class="catalog-item__actions">
-              <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
-              <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              <a class="btn btn--buy js-buyBtn js-buyBtn" href="#">Купить</a>
+              <a class="btn btn--bookmark js-bookmarkBtn" href="#">В закладки</a>
             </div>
             <div class="catalog-item__image">
               <img src="img/item-bfg9000.jpg" width="218" height="182" alt="BFG 9000">
@@ -283,8 +283,8 @@
           </div>
           <div class="catalog-item">
             <div class="catalog-item__actions">
-              <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
-              <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              <a class="btn btn--buy js-buyBtn js-buyBtn" href="#">Купить</a>
+              <a class="btn btn--bookmark js-bookmarkBtn" href="#">В закладки</a>
             </div>
             <div class="catalog-item__image">
               <img src="img/item-bfg3000.jpg" width="218" height="182" alt="BFG 3000">
@@ -302,8 +302,8 @@
           </div>
           <div class="catalog-item">
             <div class="catalog-item__actions">
-              <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
-              <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              <a class="btn btn--buy js-buyBtn js-buyBtn" href="#">Купить</a>
+              <a class="btn btn--bookmark js-bookmarkBtn" href="#">В закладки</a>
             </div>
             <div class="catalog-item__image">
               <img src="img/item-bfg6000.jpg" width="218" height="182" alt="BFG 6000">
@@ -321,8 +321,8 @@
           </div>
           <div class="catalog-item label-new label-new--catalog">
             <div class="catalog-item__actions">
-              <a href="#" class="btn btn--buy js-buyBtn js-buyBtn">Купить</a>
-              <a href="#" class="btn btn--bookmark js-bookmarkBtn">В закладки</a>
+              <a class="btn btn--buy js-buyBtn js-buyBtn" href="#">Купить</a>
+              <a class="btn btn--bookmark js-bookmarkBtn" href="#">В закладки</a>
             </div>
             <div class="catalog-item__image">
               <img src="img/item-bfg2000.jpg" width="218" height="182" alt="BFG 2000">
@@ -332,7 +332,6 @@
               BFG 2000
             </h3>
             <div class="catalog-item__price-cancelled">
-
             </div>
             <div class="catalog-item__price-current">
               12500 Р.
@@ -422,7 +421,7 @@
           <input class="tabs__input tabs__input--delivery" id="tab1" name="tabs" type="radio" checked>
           <input class="tabs__input tabs__input--guarantee" id="tab2" name="tabs" type="radio">
           <input class="tabs__input tabs__input--credit" id="tab3" name="tabs" type="radio">
-          <ul class="tabs-panel-list">
+          <ul class="tabs-panel">
             <li class="tabs-panel__item tabs-panel__item--delivery">
               <label class="tabs-panel__link" for="tab1">Доставка</label>
             </li>
@@ -433,9 +432,9 @@
               <label class="tabs-panel__link" for="tab3">Кредит</label>
             </li>
           </ul>
-          <div class="tabs-info-block">
-            <div class="tab-info tab-info--delivery">
-              <h3 class="tab-info__title">
+          <div class="tabs-info">
+            <div class="tabs-info__item tabs-info__item--delivery">
+              <h3 class="tabs-info__title">
                 Доставка
               </h3>
               <p>
@@ -445,8 +444,8 @@
                 поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="tab-info tab-info--guarantee">
-              <h3 class="tab-info__title">
+            <div class="tabs-info__item tabs-info__item--guarantee">
+              <h3 class="tabs-info__title">
                 Гарантия
               </h3>
               <p>
@@ -457,8 +456,8 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </div>
-            <div class="tab-info tab-info--credit">
-              <h3 class="tab-info__title">
+            <div class="tabs-info__item tabs-info__item--credit">
+              <h3 class="tabs-info__title">
                 Кредит
               </h3>
               <p>
@@ -520,7 +519,7 @@
         <a class="map js-mapLink" href="img/map-full.jpg"> <!-- ссылка на картинку (по-хорошему нужна отдельная страница), если нет js -->
           <img src="img/map.png" width="300" height="158" alt="ул. Б. Конюшенная, д. 19/8">
         </a>
-        <a href="form.html" class="btn btn--mail js-mailBtn">
+        <a class="btn btn--mail js-mailBtn" href="form.html">
           Заблудились? Напишите нам!
         </a>
       </article>
@@ -541,14 +540,14 @@
             <div class="logo logo--footer">
               <span class="logo__text">Техномарт</span>
             </div>
-            <p class="address">
+            <p class="footer-company-info__address">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               +7 (812) 555-05-55
             </p>
           </div>
           <!--+++++++++++++++++++++++ FOOTER MENU ++++++++++++++++++++++++++-->
           <nav class="footer-menu footer-menu--right">
-            <ul class="footer-menu-list">
+            <ul class="footer-menu__list">
               <li class="footer-menu__item">
                 <a class="footer-menu__link" href="#">
                   Компания
@@ -575,7 +574,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="footer-menu-list footer-menu-list--gold">
+            <ul class="footer-menu__list footer-menu__list--gold">
               <li class="footer-menu__item">
                 <a class="footer-menu__link" href="#">
                   Материалы
@@ -613,15 +612,15 @@
           <!--+++++++++++++++++++++++++ SOCIAL +++++++++++++++++++++++++++++-->
           <ul class="social">
             <li class="social__item">
-              <a href="#" class="social__link social__link--vk">
+              <a class="social__link social__link--vk" href="#">
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--fb">
+              <a class="social__link social__link--fb" href="#">
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--inst">
+              <a class="social__link social__link--inst" href="#">
               </a>
             </li>
           </ul>
@@ -678,7 +677,7 @@
           <textarea class="modal-form__input modal-form__textarea" id="message" name="message" placeholder="В свободной форме"></textarea>
         </div>
         <div class="modal-form__buttons">
-          <input type="submit" class="btn btn--modal-form btn--modal-form-ok" value="Отправить">
+          <input class="btn btn--modal-form btn--modal-form-ok" type="submit" value="Отправить">
           <button class="btn btn--modal-form btn--modal-form-cancel js-modalFormCancelBtn">
             Отмена
           </button>
