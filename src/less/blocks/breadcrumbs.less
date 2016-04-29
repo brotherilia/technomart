@@ -1,79 +1,57 @@
-.breadcrumbs__items,
-.breadcrumbs__item {
-  margin: 0;
-  padding: 0;
+.breadcrumbs {
 
-  list-style: none;
-}
+  &__items {
+    .reset-list();
+    font-size: 0;
+    margin-left: -5px;
+  }
 
-.breadcrumbs__items {
-  font-size: 0;
+  &__item {
+    .inline-block();
+    font-family: @base-font-family;
+    font-size: 13px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #000000;
+  }
 
-  margin-left: -5px;
-}
+  &__link {
+    position: relative;
+    display: block;
+    padding-right: 37px;
+    text-decoration: none;
+    color: #000000;
 
-.breadcrumbs__item {
-  font-family: "PT Sans", "Arial Narrow", sans-serif;
-  font-size: 13px;
-  line-height: 60px;
+    &:hover {
+      text-decoration: underline;
+      color: #000000;
+    }
 
-  display: inline-block;
+    &--home:hover {
+      text-decoration: none;
+    }
 
-  vertical-align: middle;
-  text-transform: uppercase;
+    &:active {
+      text-decoration: none;
+      color: #c1c6ce;
+    }
 
-  color: #000000;
-}
+    &::after {
+      position: absolute;
+      top: 25px;
+      right: 18px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      content: "";
+      transform: rotate(-45deg);
+      border-right: solid 1px #c1c6ce;
+      border-bottom: solid 1px #c1c6ce;
+    }
 
-.breadcrumbs__link {
-  position: relative;
-
-  display: block;
-
-  padding-right: 37px;
-
-  text-decoration: none;
-
-  color: #000000;
-}
-
-.breadcrumbs__link:hover {
-  text-decoration: underline;
-
-  color: #000000;
-}
-
-.breadcrumbs__link--home:hover {
-  text-decoration: none;
-}
-
-.breadcrumbs__link:active {
-  text-decoration: none;
-
-  color: #c1c6ce;
-}
-
-.breadcrumbs__link::after {
-  position: absolute;
-  top: 25px;
-  right: 18px;
-
-  display: block;
-
-  width: 8px;
-  height: 8px;
-
-  content: "";
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-
-  border-right: solid 1px #c1c6ce;
-  border-bottom: solid 1px #c1c6ce;
-}
-
-.breadcrumbs__link--home {
-  font-size: 16px;
-
-  color: #c1c6ce;
+    &--home {
+      font-size: 16px;
+      color: #c1c6ce;
+    }
+  }
 }

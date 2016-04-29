@@ -1,3 +1,13 @@
+.reset-block() {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-list() {
+  .reset-block();
+  list-style: none;
+}
+
 .clearfix() {
   &::after {
     display: table;
@@ -8,29 +18,44 @@
 
 .dots() {
   overflow: hidden;
-
   box-sizing: border-box;
   padding-right: 10px;
-
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .column-header() {
   .clearfix();
-  font-family: "PT Sans", "Arial Narrow", sans-serif;
+  font-family: @base-font-family;
   font-size: 13px;
-
   min-height: 33px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 5px;
   padding-left: 18px;
-
   text-transform: uppercase;
-  text-transform: uppercase;
-
   border-radius: 3px;
   background-color: #f7f3ec;
 }
 
+.btn-link-style() {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.inline-block() {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.slider-link() {
+  position: absolute;
+  z-index: 5;
+  top: 115px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}

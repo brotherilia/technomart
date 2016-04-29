@@ -4,7 +4,6 @@
   font-family: "symbols-technomart";
   font-weight: normal;
   font-style: normal;
-
   src: url("../fonts/symbols-technomart.eot?22619757");
   src: url("../fonts/symbols-technomart.eot?22619757#iefix") format("embedded-opentype"),
   url("../fonts/symbols-technomart.woff?22619757") format("woff"),
@@ -32,15 +31,12 @@
   font-variant: normal;
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
-
   display: inline-block;
-
   width: 1em;
   margin-right: 0.2em;
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: 0.2em;
-
   text-align: center;
   /*
   Критерий Д8. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
@@ -48,7 +44,6 @@
   */
   text-decoration: inherit;
   text-transform: none;
-
   speak: none;
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */

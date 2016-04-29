@@ -1,22 +1,11 @@
-.pagination,
-.pagination__item {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
 .pagination {
+  .reset-list();
   font-size: 0;
-
   margin-bottom: 60px;
-}
 
-.pagination__item {
-  font-family: "PT Sans", "Arial Narrow", sans-serif;
-  font-size: 13px;
-
-  display: inline-block;
-
-  vertical-align: top;
+  &__item {
+    .inline-block();
+    font-family: @base-font-family;
+    font-size: 13px;
+  }
 }

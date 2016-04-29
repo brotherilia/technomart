@@ -1,93 +1,80 @@
 .range {
   position: relative;
-
   height: 41px;
   margin-top: 15px;
   margin-bottom: 8px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   background-color: #f7f3ec;
-}
 
-.range__scale {
-  height: 2px;
+  &__scale {
+    height: 2px;
+    background-color: #d7dcde;
+  }
 
-  background-color: #d7dcde;
-}
+  &__bar {
+    width: 140px;
+    height: 2px;
+    margin-left: 10px;
+    background-color: #00ca74;
+  }
 
-.range__bar {
-  width: 140px;
-  height: 2px;
-  margin-left: 10px;
+  &__toggle {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    background: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
 
-  background-color: #00ca74;
-}
+    &--min {
+      left: 20px;
+    }
 
-.range__toggle {
-  position: absolute;
-  top: 30px;
-  left: 0;
+    &--max {
+      left: 160px;
+    }
+  }
 
-  width: 4px;
-  height: 4px;
+  &__fields {
+    font-size: 0;
+  }
 
-  cursor: pointer;
+  &__input {
+    font-family: @base-font-family;
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 43%;
+    height: 35px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background: #f7f3ec;
 
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  background: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-}
+    &--min {
+      float: left;
+    }
 
-.range__toggle--min {
-  left: 20px;
-}
+    &--max {
+      float: right;
+    }
+  }
 
-.range__toggle--max {
-  left: 160px;
-}
-
-.range__fields {
-  font-size: 0;
-}
-
-.range__input {
-  font-family: "PT Sans", "Arial Narrow", sans-serif;
-  font-size: 17px;
-
-  box-sizing: border-box;
-  width: 43%;
-  height: 35px;
-
-  text-align: center;
-
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  background: #f7f3ec;
-}
-
-.range__input--min {
-  float: left;
-}
-
-.range__dash {
-  font-size: 17px;
-  line-height: 32px;
-
-  float: left;
-
-  box-sizing: border-box;
-  width: 14%;
-  height: 35px;
-
-  text-align: center;
-}
-
-.range__input--max {
-  float: right;
+  &__dash {
+    font-size: 17px;
+    line-height: 32px;
+    float: left;
+    box-sizing: border-box;
+    width: 14%;
+    height: 35px;
+    text-align: center;
+  }
 }

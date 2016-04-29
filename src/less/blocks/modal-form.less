@@ -1,0 +1,94 @@
+.modal-form {
+  width: 620px;
+  margin-left: -310px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 1),
+  0 -7px 0 0 #ee3643;
+
+  &__buttons {
+    font-size: 0;
+    height: 113px;
+    padding: 0 80px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  &__message {
+    font-family: @alt-font-family;
+    font-size: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    height: 30px;
+    margin-top: -15px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -100px;
+      display: block;
+      width: 66px;
+      height: 66px;
+      margin-top: -33px;
+      content: "";
+      background: url("../img/green-check.png") no-repeat center;
+    }
+  }
+
+  &__fieldset {
+    .inline-block();
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__field-title {
+    font-family: @alt-font-family;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    .reset-block();
+    font-family: @base-font-family;
+    font-size: 13px;
+    display: block;
+    padding: 12px;
+    border: none;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+    outline: none;
+  }
+
+  &__text {
+    width: 192px;
+  }
+
+  &__textarea {
+    width: 432px;
+    height: 86px;
+  }
+
+  &--mail {
+    margin-top: -211.5px;
+  }
+
+  &__content--mail {
+    font-size: 0;
+    height: 275px;
+    padding: 35px 80px 0;
+  }
+
+  &--cart {
+    margin-top: -138.5px;
+  }
+
+  &__content--cart {
+    position: relative;
+    height: 164px;
+  }
+}

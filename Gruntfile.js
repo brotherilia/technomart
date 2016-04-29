@@ -22,6 +22,7 @@ module.exports = function(grunt) {
             "fonts/**/*.{eot,ttf,woff,woff2}",
             "img/*.{jpg,png,gif,svg}",
             "js/**/*.js",
+            "css/**/*.css",
             "*.html"
           ],
           dest: "build"
@@ -77,6 +78,17 @@ module.exports = function(grunt) {
         },
         files: {
           "build/css/style.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    //*** Конкатенация CSS ***//
+    concat: {
+      css: {
+        src: [ "build/css/normalize.css", "build/css/fonts.css", "build/css/icon-font.css", "build/css/style.css" ],
+        dest: "build/css/style.css",
+        options: {
+          separator: "\n\r/***** CONCATENATION HERE! *****/\n\r"
         }
       }
     },
@@ -148,7 +160,7 @@ module.exports = function(grunt) {
       },
       style: {
         files: ["src/less/**/*.less"],
-        tasks: ["less", "postcss", "csscomb", "csso"],
+        tasks: ["less", "postcss", "csscomb", "concat", "csso"],
         options: {spawn: false}
       },
       scripts: {
@@ -169,7 +181,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("css", ["less", "postcss", "csscomb", "csso"]);
+  grunt.registerTask("css", ["less", "postcss", "csscomb", "concat", "csso"]);
   grunt.registerTask("build", [
     "clean",
     "copy:build",

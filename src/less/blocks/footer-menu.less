@@ -1,0 +1,50 @@
+.footer-menu {
+
+  &--right {
+    float: right;
+  }
+
+  &__list {
+    .reset-list();
+    margin-top: 37px;
+    margin-bottom: 35px;
+    text-align: right;
+
+    &--gold {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    .inline-block();
+    padding-left: 54px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #f1f5f7;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: none;
+      opacity: 0.5;
+    }
+  }
+
+  &__list--gold &__link {
+    text-decoration: none;
+    color: #ffd180;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

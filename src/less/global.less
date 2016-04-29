@@ -1,16 +1,13 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
+  .reset-block();
 }
 
 body {
-  font-family: "PT Sans", "Arial Narrow", sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
   min-width: 960px;
-
   color: #000000;
   background: #ffffff;
 }
@@ -23,9 +20,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
-
-
-
-

@@ -1,0 +1,35 @@
+.vendor-info {
+  .reset-list();
+  float: right;
+  margin-top: 37px;
+  margin-right: 14px;
+
+  &__item {
+    .inline-block();
+    padding-right: 48px;
+    color: #ffffff;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #ffd180;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: #ee3643;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.auth-btn {
+  .inline-block();
+  font-family: @alt-font-family;
+  font-size: 21px;
+  line-height: 45px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+
+  &:hover {
+    color: #ee3643;
+  }
+
+  &:active {
+    color: #cacaca;
+  }
+
+  &--reg {
+    padding: 0 23px;
+  }
+
+  &--login {
+    position: relative;
+    padding-right: 27px;
+    padding-left: 47px;
+
+    &::before {
+      position: absolute;
+      top: 13px;
+      left: 12px;
+      display: block;
+      width: 20px;
+      height: 17px;
+      content: "";
+      background-image: url("../img/sprite-icons.png");
+      background-position: -5px -228px;
+    }
+
+    &:hover::before {
+      background-position: -5px -255px;
+    }
+
+    &:active::before {
+      background-position: -5px -228px;
+    }
+  }
+
+  &--user {
+    position: relative;
+    width: 212px;
+    padding-left: 48px;
+
+    &:hover {
+      color: #000000;
+    }
+
+    &:active {
+      color: #cacaca;
+    }
+
+    &::before {
+      position: absolute;
+      top: 13px;
+      left: 12px;
+      display: block;
+      width: 20px;
+      height: 18px;
+      content: "";
+      background-image: url("../img/sprite-icons.png");
+      background-position: -5px -539px;
+    }
+
+    &:hover::before {
+      background-position: -5px -567px;
+    }
+
+    &:active::before {
+      background-position: -5px -539px;
+    }
+  }
+
+  &--logout {
+    margin-left: 0;
+    padding: 0 10px;
+
+    &::before {
+      display: inline-block;
+      width: 21px;
+      height: 17px;
+      content: "";
+      vertical-align: middle;
+      background-image: url("../img/sprite-icons.png");
+      background-position: -5px -282px;
+    }
+
+    &:hover::before {
+      background-position: -5px -309px;
+    }
+
+    &:active::before {
+      background-position: -5px -282px;
+    }
+  }
+}
